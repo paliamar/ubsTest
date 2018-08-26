@@ -1,14 +1,14 @@
 package com.ubs.opsit.interviews;
 
 
-public class Minutes implements TimeConverter {
+public class Minutes  {
     
     private static final String RED_LIGHT = "R";
     private static final String YELLOW_LIGHT = "Y";
     private static final String ALL_FOUR_LIGHTS_OFF = "OOOO";
     private static final String ALL_ELVN_LIGHTS_OFF = "OOOOOOOOOOO";
 
-    @Override
+    
     public String convertTime(String mins) {
         int minuteFirstRow = Integer.parseInt(mins) / 5;
         int minuteBottomRow = Integer.parseInt(mins) % 5;

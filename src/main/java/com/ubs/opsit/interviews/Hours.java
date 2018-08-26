@@ -5,7 +5,7 @@ package com.ubs.opsit.interviews;
  *
  * @author amarpali
  */
-public class Hours implements TimeConverter {
+public class Hours {
     
     private static final String ALL_LIGHTS_OFF = "OOOO";
     private static final String RED_LIGHT = "R";
@@ -16,7 +16,7 @@ public class Hours implements TimeConverter {
      * @param hrs
      * @return 
      */
-    @Override
+    
     public String convertTime(String hrs) {
         int hours = Integer.parseInt(hrs);
         return getHoursFirstRow(hours) + "\n" + getHoursBottomRow(hours);
