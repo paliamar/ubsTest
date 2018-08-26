@@ -3,6 +3,7 @@ package com.ubs.opsit.interviews;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
 import org.junit.Test;
+import com.ubs.opsit.interviews.*;
 
 import static com.ubs.opsit.interviews.support.BehaviouralTestEmbedder.aBehaviouralTestRunner;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -31,6 +32,10 @@ public class BerlinClockFixture {
 
     @Then("the clock should look like $")
     public void thenTheClockShouldLookLike(String theExpectedBerlinClockOutput) {
+    	berlinClock = new TimeConverterImpl();
+    	System.out.println("  Time :: " + theTime);
+    	System.out.println("  expected  :: " + theExpectedBerlinClockOutput);
         assertThat(berlinClock.convertTime(theTime)).isEqualTo(theExpectedBerlinClockOutput);
+        System.out.println("  expected2  :: " + theExpectedBerlinClockOutput);
     }
 }
